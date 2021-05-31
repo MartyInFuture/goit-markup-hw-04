@@ -79,7 +79,7 @@ a {
   padding-bottom: 94px;
   margin-right: auto;
   margin-left: auto;
-  width: 1600px;
+  /* width: 1600px; */
 }
 
 .icon-flex {
@@ -107,6 +107,7 @@ a {
 
 .site-nav-pages-link {
   display: flex;
+  color: var(--secondary-text-color);
 }
 
 .site-nav-pages-link .item a {
@@ -120,7 +121,9 @@ a {
 }
 
 .site-nav-pages-link a:hover,
-.site-nav-contacts a:hover {
+.site-nav-contacts a:hover,
+.site-nav-pages-link a:focus,
+.site-nav-contacts a:focus {
   color: var(--accent-color);
 }
 
@@ -159,6 +162,7 @@ a {
 }
 
 .hero {
+  max-width: 1600px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -268,7 +272,7 @@ a {
   justify-content: center;
 }
 
-.social-list-item {
+.social-list-item a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,11 +286,13 @@ a {
   margin-right: 10px;
 }
 
-.social-list-item:hover {
+.social-list-item .link:hover,
+.social-list-item .link:focus {
   color: var(--main-background-color);
 }
 
-.social-list .social-list-item:hover {
+.social-list-item .link:hover,
+.social-list-item .link:focus {
   background-color: var(--accent-color);
 }
 
@@ -365,7 +371,7 @@ a {
   display: flex;
 }
 
-.clients-list .item {
+.clients-list .link {
   display: flex;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -379,7 +385,8 @@ a {
   margin-right: 30px;
 }
 
-.clients-list .item:hover {
+.clients-list .item a:hover,
+.clients-list .item a:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
@@ -440,15 +447,16 @@ a {
   line-height: 1.17;
 }
 
-.footer .social-list-item {
+.footer .social-list-item .link {
+  display: flex;
   color: var(--main-background-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.social-list-item a {
-  color: inherit;
+.footer .social-list-item .link:hover,
+.footer .social-list-item .link:focus {
+  background-color: var(--accent-color);
 }
-
 /* Portfolio */
 
 .portfolio-works-list .title {
@@ -496,4 +504,11 @@ a {
 
 .portfolio-works-list .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.portfolio-works-list .link:hover,
+.portfolio-works-list .link:focus {
+  display: inline-block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
